@@ -1,6 +1,5 @@
 import pywt
 import numpy as np
-from typing import List
 
 class WaveletEMD:
     """
@@ -12,7 +11,7 @@ class WaveletEMD:
         self.mode  = mode 
         self.wavelet = wavelet
 
-    def __call__(self, vec1: np.ndarray, vec2: np.ndarray) -> np.ndarray:
+    def __call__(self, vec1: np.ndarray, vec2: np.ndarray) -> float:
         """Compute waveletEMD between two histogram descriptors
 
         Args:
@@ -33,9 +32,6 @@ class WaveletEMD:
 
         return dist
 
-
-    def distance_from_coeffs(self, coeffs1: List[np.ndarray], coeffs2: List[np.ndarray] ) -> np.ndarray:
-        pass
 
     def to_wavelet_domain(self, vec: np.ndarray) -> np.ndarray:
         "Compute wavelet coefficients for a histogram descriptor"
