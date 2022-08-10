@@ -19,7 +19,7 @@ class WaveletEMD:
             vec2 (np.ndarray): histogram descriptor 2
 
         Returns:
-            np.ndarray: waveletEMD between vec1 and vec2
+            float: waveletEMD between vec1 and vec2
         """        
         # compute wavelet coefficients for each vector
         coeffs1, coeffs2 = self.to_wavelet_domain(vec1), self.to_wavelet_domain(vec2)
